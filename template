@@ -1,0 +1,39 @@
+{
+    "channel_code": "DE",
+    "commercial_id": "",
+    "customer": {
+        "billing_address": {
+            "city": "München",
+            "civility": "Mr.",
+            "country": "Germany",
+            "country_iso_code": "DEU",
+            "firstname": "Limango",
+            "lastname": "Test",
+            "phone": "+49 89 12345678",
+            "street_1": "Marsstraße 46",
+            "zip_code": "80335"
+        },
+        "civility": "Mr.",
+        "customer_id": "17071721",
+        "email": "hans.mueller@example.de",
+        "firstname": "Limango",
+        "lastname": "Test",
+        "locale": "de_DE",
+        "shipping_address": {
+            "city": "München",
+            "civility": "Mr.",
+            "country": "Germany",
+            "country_iso_code": "DEU",
+            "firstname": "Limango",
+            "lastname": "Test",
+            "phone": "+49 89 12345678",
+            "street_1": "Marsstraße 46",
+            "zip_code": "80335"
+        }
+    },
+    "offers": [],
+    "order_tax_mode": "TAX_INCLUDED",
+    "payment_workflow": "NO_CUSTOMER_PAYMENT_CONFIRMATION",
+    "scored": true,
+    "shipping_zone_code": "DE"
+}

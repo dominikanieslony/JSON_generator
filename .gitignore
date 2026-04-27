@@ -1,0 +1,50 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+env/
+.env/
+
+# =========================
+# Streamlit
+# =========================
+.streamlit/
+
+# =========================
+# Local generated data (IMPORTANT)
+# =========================
+data/
+outputs/
+generated/
+*.json
+
+# =========================
+# Secrets (NEVER commit)
+# =========================
+*.env
+.env.*
+secrets.toml
+.streamlit/secrets.toml
+
+# =========================
+# Logs
+# =========================
+*.log
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# IDEs
+# =========================
+.vscode/
+.idea/
