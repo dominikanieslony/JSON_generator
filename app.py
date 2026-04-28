@@ -39,7 +39,7 @@ if "offers" not in st.session_state:
 
 st.set_page_config(page_title="JSON Generator", layout="centered")
 
-st.title("📦 JSON Offer Generator")
+st.title("📦 JSON Order Generator")
 
 
 # ----------------------------
