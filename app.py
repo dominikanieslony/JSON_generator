@@ -1,20 +1,26 @@
 import streamlit as st
 import json
+import os
 from datetime import datetime
 
-TEMPLATE_PATH = "template.json"
+# ----------------------------
+# FIXED TEMPLATE PATH (CLOUD SAFE)
+# ----------------------------
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+TEMPLATE_PATH = os.path.join(BASE_DIR, "template.json")
 
 
-# ----------------------------
-# LOAD TEMPLATE (LOCAL ONLY)
-# ----------------------------
 def load_template():
+    if not os.path.exists(TEMPLATE_PATH):
+        st.error(f"❌ template.json not found at: {TEMPLATE_PATH}")
+        st.stop()
+
     with open(TEMPLATE_PATH, "r", encoding="utf-8") as f:
         return json.load(f)
 
 
 # ----------------------------
-# IDS
+# ID GENERATION
 # ----------------------------
 def generate_commercial_id():
     return datetime.now().strftime("%Y%m%d%H%M")
@@ -25,7 +31,7 @@ def generate_order_line_id(commercial_id, index):
 
 
 # ----------------------------
-# TAX CALC
+# TAX CALCULATION
 # ----------------------------
 def calc_tax(amount, rate):
     return round(amount * rate / (100 + rate), 2)
@@ -39,7 +45,7 @@ if "offers" not in st.session_state:
 
 st.set_page_config(page_title="JSON Generator", layout="centered")
 
-st.title("📦 JSON Order Generator")
+st.title("📦 JSON Offer Generator")
 
 
 # ----------------------------
@@ -156,9 +162,11 @@ if st.button("🚀 Generate JSON"):
 
     json_output = json.dumps(template, indent=4, ensure_ascii=False)
 
+    # Preview
     st.subheader("🔎 JSON Preview")
     st.code(json_output, language="json")
 
+    # Download
     filename = f"generated_{commercial_id}.json"
 
     st.download_button(
