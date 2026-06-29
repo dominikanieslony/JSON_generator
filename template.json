@@ -1,6 +1,6 @@
 {
     "channel_code": "DE",
-    "commercial_id": "",
+    "commercial_id": "202602121230",
     "customer": {
         "billing_address": {
             "city": "München",
@@ -10,7 +10,8 @@
             "firstname": "Limango",
             "lastname": "Test",
             "phone": "+49 89 12345678",
-            "street_1": "Marsstraße 46",
+            "street_1": "Marsstraße",
+            "street_2": "46",
             "zip_code": "80335"
         },
         "civility": "Mr.",
@@ -27,11 +28,30 @@
             "firstname": "Limango",
             "lastname": "Test",
             "phone": "+49 89 12345678",
-            "street_1": "Marsstraße 46",
+            "street_1": "Marsstraße",
+            "street_2": "46",
             "zip_code": "80335"
         }
     },
-    "offers": [],
+    "offers": [
+        {
+            "order_line_id": "202602121230001",
+            "currency_iso_code": "EUR",
+            "offer_id": 2060,
+            "shipping_type_code": "STD",
+            "quantity": 1,
+            "offer_price": 100.00,
+            "price": 100,
+            "taxes": [
+                {
+                    "amount": 15.97,
+                    "code": "vat-de-standard",
+                    "rate": 19
+                }
+            ],
+            "shipping_price": 0.00
+        }
+    ],
     "order_tax_mode": "TAX_INCLUDED",
     "payment_workflow": "NO_CUSTOMER_PAYMENT_CONFIRMATION",
     "scored": true,
